@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Customer account settings" />
+    <title>Account Settings | Thread &amp; Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Thread and Form home">Thread<span>&amp;</span>Form</a>
+      <nav aria-label="Main navigation">
+        <a href="#">Shop</a><a href="#">New arrivals</a><a href="#">Collections</a>
+      </nav>
+      <div class="header-actions"><button class="icon-button" aria-label="Search">⌕</button><button class="bag-button" aria-label="Shopping bag">Bag <span>2</span></button></div>
+    </header>
+
+    <main class="account-layout">
+      <aside class="account-sidebar">
+        <p class="eyebrow">Your account</p>
+        <h1>Good morning,<br />Amara.</h1>
+        <nav class="account-nav" aria-label="Account navigation">
+          <a href="#"><span>Orders</span><span aria-hidden="true">↗</span></a>
+          <a href="#"><span>Addresses</span><span aria-hidden="true">↗</span></a>
+          <a class="active" href="#settings" aria-current="page"><span>Settings</span><span aria-hidden="true">↗</span></a>
+          <a href="#"><span>Saved items</span><span aria-hidden="true">↗</span></a>
+        </nav>
+        <a class="sign-out" href="#">Sign out <span aria-hidden="true">→</span></a>
+      </aside>
+
+      <section class="settings" id="settings" aria-labelledby="settings-title">
+        <div class="settings-heading"><p class="eyebrow">Account preferences</p><h2 id="settings-title">Settings</h2><p>Keep your details up to date and choose how you’d like to hear from us.</p></div>
+
+        <form id="settings-form" novalidate>
+          <section class="form-section" aria-labelledby="personal-title">
+            <div class="section-heading"><span class="section-number">01</span><div><h3 id="personal-title">Personal details</h3><p>Used to personalize your Thread&amp;Form experience.</p></div></div>
+            <div class="fields two-columns">
+              <div class="field"><label for="firstName">First name</label><input id="firstName" name="firstName" value="Amara" autocomplete="given-name" required /><p class="error" id="firstName-error"></p></div>
+              <div class="field"><label for="lastName">Last name</label><input id="lastName" name="lastName" value="Okafor" autocomplete="family-name" required /><p class="error" id="lastName-error"></p></div>
+            </div>
+            <div class="fields two-columns">
+              <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" value="amara.okafor@example.com" autocomplete="email" required /><p class="error" id="email-error"></p></div>
+              <div class="field"><label for="phone">Phone number <span class="optional">Optional</span></label><input id="phone" name="phone" type="tel" value="" placeholder="e.g. +234 801 234 5678" autocomplete="tel" /><p class="error" id="phone-error"></p></div>
+            </div>
+          </section>
+
+          <section class="form-section" aria-labelledby="preferences-title">
+            <div class="section-heading"><span class="section-number">02</span><div><h3 id="preferences-title">Preferences</h3><p>Choose the updates you want to receive.</p></div></div>
+            <fieldset class="preferences"><legend class="sr-only">Communication preferences</legend>
+              <label class="toggle-row" for="emailUpdates"><span><strong>Email updates</strong><small>New collections, private sales, and styling notes.</small></span><input id="emailUpdates" name="emailUpdates" type="checkbox" checked /><span class="toggle" aria-hidden="true"></span></label>
+              <label class="toggle-row" for="orderUpdates"><span><strong>Order updates</strong><small>Delivery tracking and important purchase information.</small></span><input id="orderUpdates" name="orderUpdates" type="checkbox" checked /><span class="toggle" aria-hidden="true"></span></label>
+              <label class="toggle-row" for="personalization"><span><strong>Personalized recommendations</strong><small>Product picks based on your browsing and order history.</small></span><input id="personalization" name="personalization" type="checkbox" /><span class="toggle" aria-hidden="true"></span></label>
+            </fieldset>
+          </section>
+
+          <section class="form-section password-section" aria-labelledby="password-title">
+            <div class="section-heading"><span class="section-number">03</span><div><h3 id="password-title">Password</h3><p>Update your password to keep your account secure.</p></div></div>
+            <button class="secondary-button" type="button" id="show-password">Change password <span aria-hidden="true">→</span></button>
+            <div class="password-fields" id="password-fields" hidden>
+              <div class="fields two-columns"><div class="field"><label for="newPassword">New password</label><div class="password-input"><input id="newPassword" name="newPassword" type="password" autocomplete="new-password" /><button type="button" class="reveal-password" aria-label="Show password">Show</button></div><p class="error" id="newPassword-error"></p></div><div class="field"><label for="confirmPassword">Confirm new password</label><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" /><p class="error" id="confirmPassword-error"></p></div></div>
+              <p class="password-hint">Use 8 or more characters with a mix of letters and numbers.</p>
+            </div>
+          </section>
+
+          <div class="form-footer"><p id="form-message" role="status" aria-live="polite"></p><button class="primary-button" type="submit">Save changes <span aria-hidden="true">→</span></button></div>
+        </form>
+      </section>
+    </main>
+    <footer>© 2026 Thread&amp;Form <span>Made with intention.</span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
