@@ -28,6 +28,10 @@ A modern e-commerce website developed as a capstone project using AI-assisted de
 - Git
 - GitHub
 
+## Getting Started
+
+The application source code has not yet been committed, so the project cannot currently be run locally. This repository will be updated with installation and development instructions once the React application is initialized.
+
 ## Project Status
 
 Currently in the setup phase. The project environment, Git workflow, and AI-assisted development tools are being configured.
