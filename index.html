@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manage your e-commerce account settings." />
+    <title>Account Settings | Marketly</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#">marketly<span>.</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#">Shop</a>
+        <a href="#">Orders</a>
+        <a class="active" href="#settings" aria-current="page">Account</a>
+      </nav>
+    </header>
+
+    <main id="settings" class="page-shell">
+      <section class="settings-panel" aria-labelledby="settings-title">
+        <p class="eyebrow">Account settings</p>
+        <h1 id="settings-title">Your details, your way.</h1>
+        <p class="intro">Update your information and choose the messages you want to receive.</p>
+
+        <form id="customer-settings" novalidate>
+          <section class="card" aria-labelledby="details-heading">
+            <h2 id="details-heading">Personal details</h2>
+            <div class="form-grid">
+              <div class="field full-width">
+                <label for="fullName">Full name <span aria-hidden="true">*</span></label>
+                <input id="fullName" name="fullName" type="text" autocomplete="name" required aria-describedby="fullName-hint fullName-error" />
+                <p class="hint" id="fullName-hint">Use the name shown on your deliveries.</p>
+                <p class="error" id="fullName-error" aria-live="polite"></p>
+              </div>
+              <div class="field full-width">
+                <label for="email">Email address <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint email-error" />
+                <p class="hint" id="email-hint">We use this for receipts and order updates.</p>
+                <p class="error" id="email-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="phone">Phone number <span class="optional">Optional</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+234 800 000 0000" aria-describedby="phone-hint phone-error" />
+                <p class="hint" id="phone-hint">Include your country code.</p>
+                <p class="error" id="phone-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="country">Country or region</label>
+                <select id="country" name="country" autocomplete="country-name">
+                  <option value="">Select a country</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="Ghana">Ghana</option>
+                  <option value="Kenya">Kenya</option>
+                  <option value="South Africa">South Africa</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="United States">United States</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <section class="card" aria-labelledby="password-heading">
+            <h2 id="password-heading">Change password</h2>
+            <p class="section-description">Leave these fields blank to keep your current password.</p>
+            <div class="form-grid">
+              <div class="field full-width">
+                <label for="currentPassword">Current password</label>
+                <div class="password-field"><input id="currentPassword" name="currentPassword" type="password" autocomplete="current-password" aria-describedby="currentPassword-error" /><button type="button" class="password-toggle" data-password-toggle="currentPassword" aria-label="Show current password">Show</button></div>
+                <p class="error" id="currentPassword-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="newPassword">New password</label>
+                <div class="password-field"><input id="newPassword" name="newPassword" type="password" autocomplete="new-password" aria-describedby="newPassword-hint newPassword-error" /><button type="button" class="password-toggle" data-password-toggle="newPassword" aria-label="Show new password">Show</button></div>
+                <p class="hint" id="newPassword-hint">At least 8 characters.</p>
+                <p class="error" id="newPassword-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="confirmPassword">Confirm new password</label>
+                <div class="password-field"><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" aria-describedby="confirmPassword-error" /><button type="button" class="password-toggle" data-password-toggle="confirmPassword" aria-label="Show confirmation password">Show</button></div>
+                <p class="error" id="confirmPassword-error" aria-live="polite"></p>
+              </div>
+            </div>
+          </section>
+
+          <fieldset class="card preferences">
+            <legend>Communication preferences</legend>
+            <p class="section-description">Select the updates you would like to receive.</p>
+            <label class="preference-row"><span><strong>Order updates</strong><small>Delivery, return, and order-status notifications.</small></span><input type="checkbox" name="orderUpdates" checked /><span class="switch" aria-hidden="true"></span></label>
+            <label class="preference-row"><span><strong>Offers and inspiration</strong><small>New arrivals, curated picks, and member offers.</small></span><input type="checkbox" name="marketing" /><span class="switch" aria-hidden="true"></span></label>
+          </fieldset>
+
+          <div class="form-actions">
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            <button class="submit-button" type="submit">Save changes <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="app.mjs"></script>
+  </body>
+</html>
