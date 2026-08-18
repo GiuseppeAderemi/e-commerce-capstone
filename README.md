@@ -27,3 +27,7 @@ A modern e-commerce website developed as a capstone project using AI-assisted de
 - React
 - Git
 - GitHub
+
+## Project Status
+
+Currently in the setup phase. The project environment, Git workflow, and AI-assisted development tools are being configured.
