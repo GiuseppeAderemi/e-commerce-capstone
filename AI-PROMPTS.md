@@ -2,8 +2,9 @@
 
 This file records the prompts used with AI during development of the e-commerce application.
 
-## Prompt 1 — Application Foundation
+## Prompt 1 — React Storefront Foundation
 
+```text
 Build the foundation of this React e-commerce application.
 
 Before making changes, inspect the existing React/Vite project structure and explain your implementation plan.
@@ -27,22 +28,13 @@ After implementing it:
 1. Run the application and verify that it builds.
 2. Check for obvious console errors.
 3. Summarize the files you created or changed and explain the main implementation decisions.
+```
 
-### Result
+### AI Assistance
 
-Codex created the storefront foundation with reusable React components, local product data, responsive CSS, cart-count state, and passed build/lint verification.
+AI was used as a development assistant to inspect the existing project structure, create the initial React storefront structure, generate reusable components, create mock product data, and provide build and lint verification. I reviewed the generated application manually and tested its behavior in the browser before accepting it as complete.
 
-## Prompt 2
-
-To be added.
-
-## Prompt 3
-
-To be added.
-
-## Prompt 4
-
-To be added.
+## Manual Improvements
 
 ### Manual Improvement 1 — Broken Product Image
 
@@ -57,3 +49,7 @@ I also found that `ProductCard.jsx` was calling `onAddToCart` without passing th
 ### Manual Improvement 3 — Removing Cart Items
 
 The initial cart allowed products to be added but provided no way to remove them. I added a Remove action for each cart item and updated the cart state so that removing an item also decreases the cart count. This gives users control over their selections and makes the basic shopping cart interaction more complete.
+
+## Development Approach
+
+AI generated the initial implementation, but the final application was reviewed and tested manually. Problems discovered during review were investigated and corrected independently rather than relying entirely on AI-generated code.
