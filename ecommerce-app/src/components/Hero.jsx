@@ -1,0 +1,3 @@
+import heroImage from '../assets/hero.png'
+function Hero() { return <section className="hero" id="top" aria-labelledby="hero-title"><div className="hero-copy"><p className="eyebrow">The everyday edit</p><h1 id="hero-title">Objects for a softer home.</h1><p className="hero-description">Thoughtfully chosen pieces that bring texture, warmth, and ease to the moments you use every day.</p><a className="hero-link" href="#shop">Shop the collection <span aria-hidden="true">→</span></a></div><img className="hero-image" src={heroImage} alt="A carefully arranged collection of home goods" /></section> }
+export default Hero
